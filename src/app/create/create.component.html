@@ -1,0 +1,12 @@
+<div class="example-container">
+    <mat-form-field>
+        <input 
+            type="text"
+            matInput 
+            placeholder="Enter Your todo" 
+            #input 
+            [value]="input.value.toUpperCase()"
+            (keydown)="storeVal($event)"
+        />
+    </mat-form-field>
+  </div>

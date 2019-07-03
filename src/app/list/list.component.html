@@ -1,0 +1,15 @@
+<mat-nav-list *ngIf="tasks.length">
+    <mat-list-item *ngFor="let task of tasks">
+        <span class="title" [ngClass]="task.isComplete ? 'completed' : ''" matLine>{{ task.name }}</span>
+        <button *ngIf="!task.isComplete" mat-icon-button (click)="completeTask(task)">
+            <mat-icon>check</mat-icon>
+        </button>
+        <button mat-icon-button (click)="deleteTask(task)">
+            <mat-icon>delete</mat-icon>
+        </button>
+        <button *ngIf="!task.isComplete" mat-icon-button (click)="editTask(task)">
+            <mat-icon>edit</mat-icon>
+        </button>
+    </mat-list-item>
+</mat-nav-list>
+<h1 *ngIf="!tasks.length">No todo tasks yet!!</h1>

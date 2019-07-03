@@ -1,0 +1,6 @@
+<mat-nav-list *ngIf="completedTask.length">
+    <mat-list-item *ngFor="let task of completedTask">
+        <span class="title" matLine>{{ task.name }}</span>
+    </mat-list-item>
+</mat-nav-list>
+<h1 *ngIf="!completedTask.length">No completed tasks yet!!</h1>
