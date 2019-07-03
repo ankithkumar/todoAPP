@@ -1,0 +1,18 @@
+<div class="dialog">
+    <div mat-dialog-content>
+        <p>Edit your task name: {{ data.name }}</p>
+        <mat-form-field>
+        <input 
+            type="text"
+            matInput 
+            placeholder="edit" 
+            #input 
+            [value]="input.value.toUpperCase()"
+            (keydown)="updateVal($event)"
+        />
+        </mat-form-field>
+    </div>
+    <div mat-dialog-actions>
+        <button mat-button (click)="onNoClick()">No Thanks</button>
+    </div>
+</div>
